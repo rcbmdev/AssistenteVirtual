@@ -5,7 +5,10 @@ import os
 import sys
 from datetime import datetime
 
-tts = gTTS("Olá me chamo Maria. Em que posso ajudá-lo", lang="pt-BR")
+nome = input("Digite o seu nome\n")
+frase = f"Olá {nome} me chamo Maria. Em que posso ajudá-lo"
+
+tts = gTTS(frase, lang="pt-BR")
 tts.save("audios/welcome.mp3")
 playsound("audios/welcome.mp3")
 
